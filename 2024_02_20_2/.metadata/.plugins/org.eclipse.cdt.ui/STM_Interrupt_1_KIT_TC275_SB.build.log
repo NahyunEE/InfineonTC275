@@ -1,0 +1,13 @@
+17:10:51 **** Incremental Build of configuration Debug for project STM_Interrupt_1_KIT_TC275_SB ****
+make --output-sync -j12 all 
+Invoking: Print Size
+TASKING VX-toolset for AURIX Development Studio (non-commercial): ELF size v1.1r8 Build 22011964
+elfsize  "STM_Interrupt_1_KIT_TC275_SB.elf"
+Total sizes:
+ROM: 0x22ec (8940) = code: 0x216c (8556) + romdata: 0x180 (384)
+RAM: 0x849c (33948) = data + bss
+Finished building: STM_Interrupt_1_KIT_TC275_SB.siz
+ 
+
+17:10:52 Build Finished. 0 errors, 0 warnings. (took 622ms)
+

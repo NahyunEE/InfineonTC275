@@ -1,0 +1,13 @@
+17:49:38 **** Incremental Build of configuration TriCore Debug (TASKING) for project Interrupt ****
+make --output-sync -j12 all 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): ELF size v1.1r8 Build 22011964
+Invoking: Print Size
+elfsize  "Interrupt.elf"
+Total sizes:
+ROM: 0x241f (9247) = code: 0x2272 (8818) + romdata: 0x1ad (429)
+RAM: 0x9521 (38177) = data + bss
+Finished building: Interrupt.siz
+ 
+
+17:49:38 Build Finished. 0 errors, 0 warnings. (took 476ms)
+

@@ -1,0 +1,1024 @@
+!SESSION 2024-02-19 09:52:24.458 -----------------------------------------------
+eclipse.buildId=1.9.20
+java.version=17.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -perspective com.infineon.aurix.buildmanager.perspective.c
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -perspective com.infineon.aurix.buildmanager.perspective.c
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2024-02-19 09:53:06.586
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:369)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:544)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer.createWidget(ToolBarManagerRenderer.java:434)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeChildrenHandler(PartRenderingEngine.java:312)
+	at jdk.internal.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.addUnique(NotifyingListImpl.java:356)
+	at org.eclipse.emf.common.util.AbstractEList.add(AbstractEList.java:340)
+	at org.eclipse.e4.ui.internal.workbench.ContributionsAnalyzer.processAddition(ContributionsAnalyzer.java:448)
+	at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.addTrimContributions(TrimBarRenderer.java:146)
+	at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.processContents(TrimBarRenderer.java:118)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1083)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-02-19 09:53:06.588
+!MESSAGE Exception occurred while rendering: com.infineon.aurix.buildsystem.active-project.activeProjectActionsToolbar=org.eclipse.e4.ui.model.application.ui.menu.impl.ToolBarImpl@36638b59 (tags: [Draggable], contributorURI: null) (widget: ImageBasedFrame {} [layout=null], renderer: org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer@5e1d1524, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null)
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:369)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:544)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer.createWidget(ToolBarManagerRenderer.java:434)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeChildrenHandler(PartRenderingEngine.java:312)
+	at jdk.internal.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.addUnique(NotifyingListImpl.java:356)
+	at org.eclipse.emf.common.util.AbstractEList.add(AbstractEList.java:340)
+	at org.eclipse.e4.ui.internal.workbench.ContributionsAnalyzer.processAddition(ContributionsAnalyzer.java:448)
+	at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.addTrimContributions(TrimBarRenderer.java:146)
+	at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.processContents(TrimBarRenderer.java:118)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1083)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.infineon.aurix.buildsystem 4 0 2024-02-19 09:53:07.292
+!MESSAGE ConnectException
+!STACK 0
+java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:573)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:123)
+	at com.infineon.aurix.buildsystem.IFXNetworkUtils$1.run(IFXNetworkUtils.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1047)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:472)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:404)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:476)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:476)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:157)
+	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2673)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:294)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:654)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:552)
+	... 3 more
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 29 more
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 2 0 2024-02-19 09:53:07.511
+!MESSAGE Unable to initialize Analytics Service.
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 4 0 2024-02-19 09:53:07.513
+!MESSAGE java.net.MalformedURLException: no protocol: 
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.<init>(AnalyticsService.java:66)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.getInstance(AnalyticsService.java:95)
+	at com.infineon.aurix.buildsystem.AnalyticsUtils.send(AnalyticsUtils.java:24)
+	at com.infineon.aurix.buildsystem.Analytics.sendToolStarted(Analytics.java:6)
+	at com.infineon.aurix.buildsystem.AurixIDEStartup.earlyStartup(AurixIDEStartup.java:23)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2656)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 12 more
+
+!ENTRY com.infineon.aurix.buildsystem.remote-repo 1 0 2024-02-19 11:17:08.031
+!MESSAGE Using bundled version for artifact: project-initializer:tricore-tc2xx
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 11:17:10.052
+!MESSAGE Processing template: C:\workspace\AURIX_Project\2024_02_19\Interrupt\Cpu0_Main.ftlc
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-19 11:17:41.203
+!MESSAGE Indexed 'Interrupt' (165 sources, 638 headers) in 25.2 sec: 147,675 declarations; 196,219 references; 10 unresolved inclusions; 4,982 syntax errors; 5,551 unresolved names (1.6%)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 11:54:45.999
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1396 milliseconds. (full boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 11:54:46.065
+!MESSAGE Include paths were discovered in 64 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 11:55:11.830
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 234 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 11:55:11.879
+!MESSAGE Include paths were discovered in 47 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 11:59:56.400
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 11:59:56.401
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 11:59:56.441
+!MESSAGE Include paths were discovered in 40 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:00:06.368
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 139 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:00:06.417
+!MESSAGE Include paths were discovered in 46 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:00:19.582
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 148 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:00:19.626
+!MESSAGE Include paths were discovered in 42 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:01:26.720
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 945 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:01:26.766
+!MESSAGE Include paths were discovered in 43 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:01:34.645
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 135 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:01:34.684
+!MESSAGE Include paths were discovered in 36 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:04:45.333
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1120 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:04:45.379
+!MESSAGE Include paths were discovered in 45 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:04:51.258
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 141 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:04:51.295
+!MESSAGE Include paths were discovered in 35 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:16:35.002
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1021 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:16:35.031
+!MESSAGE Include paths were discovered in 28 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:16:40.106
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 152 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:16:40.153
+!MESSAGE Include paths were discovered in 45 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:17:20.539
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:17:20.540
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:17:20.587
+!MESSAGE Include paths were discovered in 46 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:17:28.211
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 134 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:17:28.244
+!MESSAGE Include paths were discovered in 33 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:34:27.949
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 855 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:34:27.989
+!MESSAGE Include paths were discovered in 38 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:34:52.393
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 827 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:34:52.421
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:34:58.430
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 125 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:34:58.461
+!MESSAGE Include paths were discovered in 30 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:40:32.355
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:40:32.356
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:40:32.395
+!MESSAGE Include paths were discovered in 38 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:40:38.144
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 140 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:40:38.188
+!MESSAGE Include paths were discovered in 42 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:41:28.591
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:41:28.591
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:41:28.643
+!MESSAGE Include paths were discovered in 49 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:41:37.067
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 124 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 12:41:37.110
+!MESSAGE Include paths were discovered in 42 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:11:57.778
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 2259 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:11:57.811
+!MESSAGE Include paths were discovered in 31 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:12:04.615
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 141 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:12:04.653
+!MESSAGE Include paths were discovered in 37 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:13:44.159
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 857 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:13:44.198
+!MESSAGE Include paths were discovered in 37 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:13:49.475
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 149 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:13:49.511
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:14:51.253
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 918 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:14:51.289
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:14:55.642
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 156 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:14:55.724
+!MESSAGE Include paths were discovered in 80 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:15:51.993
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 923 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:15:52.021
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:16:01.477
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 131 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:16:01.516
+!MESSAGE Include paths were discovered in 38 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:18:03.624
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 831 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:18:03.656
+!MESSAGE Include paths were discovered in 30 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:18:10.873
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 120 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:18:10.902
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:18:43.297
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 857 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:18:43.325
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:19:26.990
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 854 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:19:27.018
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:19:31.841
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 172 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:19:31.872
+!MESSAGE Include paths were discovered in 30 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:22:07.115
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 981 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:22:07.144
+!MESSAGE Include paths were discovered in 28 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:23:40.201
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1785 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:23:40.239
+!MESSAGE Include paths were discovered in 36 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:24:39.280
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 850 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:24:39.307
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:25:08.630
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 813 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:25:08.655
+!MESSAGE Include paths were discovered in 23 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:25:15.219
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 151 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:25:15.251
+!MESSAGE Include paths were discovered in 31 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:25:59.732
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 804 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:25:59.762
+!MESSAGE Include paths were discovered in 29 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:26:05.607
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 124 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:26:05.633
+!MESSAGE Include paths were discovered in 24 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:26:49.616
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 781 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:26:49.645
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:26:59.707
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 170 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:26:59.776
+!MESSAGE Include paths were discovered in 67 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:31:39.414
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1039 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:31:39.442
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:31:48.128
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 127 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:31:48.157
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:32:28.036
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 858 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:32:28.064
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:32:38.097
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 113 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:32:38.122
+!MESSAGE Include paths were discovered in 23 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:33:10.673
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 827 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:33:10.703
+!MESSAGE Include paths were discovered in 29 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:33:17.138
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 113 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:33:17.175
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:35:58.545
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 779 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:35:58.568
+!MESSAGE Include paths were discovered in 22 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:36:05.997
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 247 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:36:06.025
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:36:09.544
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 128 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:36:09.596
+!MESSAGE Include paths were discovered in 50 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:36:40.054
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 782 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:36:40.080
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:36:44.694
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 116 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:36:44.735
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:40:04.484
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1073 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:40:04.510
+!MESSAGE Include paths were discovered in 24 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:40:12.189
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 122 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:40:12.219
+!MESSAGE Include paths were discovered in 28 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:47:48.536
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1044 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:47:48.570
+!MESSAGE Include paths were discovered in 31 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:49:48.677
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 777 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:49:48.711
+!MESSAGE Include paths were discovered in 32 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:49:57.575
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 121 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:49:57.611
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:50:48.100
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 787 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:50:48.122
+!MESSAGE Include paths were discovered in 21 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:50:52.581
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 131 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:50:52.609
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:50:55.353
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 130 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:50:55.382
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:52:23.329
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 793 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:52:23.352
+!MESSAGE Include paths were discovered in 22 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:52:29.488
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 137 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:52:29.523
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:57:45.280
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 780 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:57:45.306
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:58:06.365
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 821 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:58:06.390
+!MESSAGE Include paths were discovered in 24 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:58:18.712
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 127 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:58:18.738
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:59:46.212
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 787 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 14:59:46.250
+!MESSAGE Include paths were discovered in 37 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:35:05.652
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1191 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:35:05.684
+!MESSAGE Include paths were discovered in 29 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:35:10.081
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 124 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:35:10.106
+!MESSAGE Include paths were discovered in 23 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:48:06.015
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1460 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:48:06.054
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:48:13.246
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 142 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:48:13.284
+!MESSAGE Include paths were discovered in 36 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:49:43.173
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 806 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:49:43.201
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:59:49.681
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1006 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 15:59:49.713
+!MESSAGE Include paths were discovered in 29 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:00:54.161
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 877 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:00:54.192
+!MESSAGE Include paths were discovered in 29 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:00:58.611
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 122 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:00:58.639
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:01:43.514
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 987 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:01:43.538
+!MESSAGE Include paths were discovered in 22 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:01:47.193
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 125 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:01:47.219
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:03:10.212
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:03:10.213
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:03:10.246
+!MESSAGE Include paths were discovered in 32 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:03:15.617
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 148 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:03:15.653
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:05:39.460
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 822 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:05:39.486
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:05:48.723
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 117 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:05:48.749
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:10:43.565
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:10:43.566
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:10:43.590
+!MESSAGE Include paths were discovered in 23 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:10:47.987
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 111 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:10:48.014
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:12:00.685
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:12:00.685
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:12:00.720
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:12:06.252
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 115 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:12:06.286
+!MESSAGE Include paths were discovered in 32 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:12:56.592
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 137 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:12:56.629
+!MESSAGE Include paths were discovered in 35 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:13:32.212
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 136 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:13:32.256
+!MESSAGE Include paths were discovered in 43 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:14:09.853
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 784 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:14:09.879
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:14:17.400
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 115 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:14:17.424
+!MESSAGE Include paths were discovered in 22 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:15:26.170
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 896 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:15:26.210
+!MESSAGE Include paths were discovered in 38 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:16:06.918
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 864 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:16:06.963
+!MESSAGE Include paths were discovered in 43 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:16:11.485
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 117 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:16:11.517
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:17:01.072
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 839 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:17:01.092
+!MESSAGE Include paths were discovered in 20 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:17:06.209
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 114 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:17:06.233
+!MESSAGE Include paths were discovered in 23 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:00.990
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 788 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:01.037
+!MESSAGE Include paths were discovered in 45 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:16.149
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:16.150
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:16.189
+!MESSAGE Include paths were discovered in 38 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:20.579
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 121 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:20.612
+!MESSAGE Include paths were discovered in 31 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:59.470
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 816 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:18:59.495
+!MESSAGE Include paths were discovered in 23 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:19:15.721
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 182 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:19:15.787
+!MESSAGE Include paths were discovered in 63 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:19:18.643
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 134 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:19:18.671
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:19:57.036
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 788 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:19:57.063
+!MESSAGE Include paths were discovered in 26 milliseconds.
+
+!ENTRY org.eclipse.cdt.ui 4 0 2024-02-19 16:19:59.045
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element Cpu0_Main.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2024-02-19 16:19:59.045
+!MESSAGE Element Cpu0_Main.c does not exist.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:21:17.586
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 785 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:21:17.612
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:21:21.303
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 126 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:21:21.347
+!MESSAGE Include paths were discovered in 28 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:42:19.742
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1130 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:42:19.767
+!MESSAGE Include paths were discovered in 22 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:42:56.825
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 875 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:42:56.846
+!MESSAGE Include paths were discovered in 20 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:43:39.581
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 764 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:43:39.606
+!MESSAGE Include paths were discovered in 23 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:43:45.346
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 123 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:43:45.375
+!MESSAGE Include paths were discovered in 27 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:44:46.894
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 814 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:44:46.919
+!MESSAGE Include paths were discovered in 24 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:44:53.808
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 122 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:44:53.841
+!MESSAGE Include paths were discovered in 31 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:45:22.171
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 807 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:45:22.371
+!MESSAGE Include paths were discovered in 199 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:45:31.246
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 142 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:45:31.283
+!MESSAGE Include paths were discovered in 36 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:47:36.722
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 831 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:47:36.745
+!MESSAGE Include paths were discovered in 22 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:47:45.861
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 142 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:47:45.891
+!MESSAGE Include paths were discovered in 29 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:47:48.071
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 126 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 16:47:48.102
+!MESSAGE Include paths were discovered in 30 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:17:22.388
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1134 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:17:22.426
+!MESSAGE Include paths were discovered in 35 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:17:27.383
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 126 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:17:27.412
+!MESSAGE Include paths were discovered in 25 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:39:20.118
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1032 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:39:20.157
+!MESSAGE Include paths were discovered in 37 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:39:25.804
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 123 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:39:25.828
+!MESSAGE Include paths were discovered in 23 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:44:08.857
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:44:08.858
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:44:08.897
+!MESSAGE Include paths were discovered in 37 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:44:29.619
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:44:29.620
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:44:29.652
+!MESSAGE Include paths were discovered in 31 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:44:34.299
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 132 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:44:34.332
+!MESSAGE Include paths were discovered in 32 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:49:32.998
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 838 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:49:33.020
+!MESSAGE Include paths were discovered in 20 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:49:37.779
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Interrupt boosted in 128 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-19 17:49:37.809
+!MESSAGE Include paths were discovered in 25 milliseconds.

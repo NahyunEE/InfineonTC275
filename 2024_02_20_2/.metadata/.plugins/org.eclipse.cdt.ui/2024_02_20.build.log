@@ -1,0 +1,13 @@
+17:10:57 **** Incremental Build of configuration TriCore Debug (TASKING) for project 2024_02_20 ****
+make --output-sync -j12 all 
+Invoking: Print Size
+TASKING VX-toolset for AURIX Development Studio (non-commercial): ELF size v1.1r8 Build 22011964
+elfsize  "2024_02_20.elf"
+Total sizes:
+ROM: 0x271b (10011) = code: 0x2526 (9510) + romdata: 0x1f5 (501)
+RAM: 0x955d (38237) = data + bss
+Finished building: 2024_02_20.siz
+ 
+
+17:10:57 Build Finished. 0 errors, 0 warnings. (took 575ms)
+

@@ -1,0 +1,979 @@
+!SESSION 2024-02-16 09:32:57.115 -----------------------------------------------
+eclipse.buildId=1.9.20
+java.version=17.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -perspective com.infineon.aurix.buildmanager.perspective.c
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -perspective com.infineon.aurix.buildmanager.perspective.c
+
+!ENTRY com.infineon.aurix.buildsystem 4 0 2024-02-16 09:34:01.311
+!MESSAGE ConnectException
+!STACK 0
+java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:573)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:123)
+	at com.infineon.aurix.buildsystem.IFXNetworkUtils$1.run(IFXNetworkUtils.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1047)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:472)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:404)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:476)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:476)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:157)
+	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2673)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:294)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:654)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:552)
+	... 3 more
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 29 more
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 2 0 2024-02-16 09:34:01.334
+!MESSAGE Unable to initialize Analytics Service.
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 4 0 2024-02-16 09:34:01.335
+!MESSAGE java.net.MalformedURLException: no protocol: 
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.<init>(AnalyticsService.java:66)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.getInstance(AnalyticsService.java:95)
+	at com.infineon.aurix.buildsystem.AnalyticsUtils.send(AnalyticsUtils.java:24)
+	at com.infineon.aurix.buildsystem.Analytics.sendToolStarted(Analytics.java:6)
+	at com.infineon.aurix.buildsystem.AurixIDEStartup.earlyStartup(AurixIDEStartup.java:23)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2656)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 12 more
+
+!ENTRY org.eclipse.ui.workbench 4 2 2024-02-16 09:34:01.389
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.notification.NotificationService.<init>(NotificationService.java:62)
+	at com.infineon.aurix.buildsystem.notification.NotificationService.getInstance(NotificationService.java:82)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.send(AnalyticsService.java:159)
+	at com.infineon.aurix.buildsystem.AnalyticsUtils.send(AnalyticsUtils.java:24)
+	at com.infineon.aurix.buildsystem.Analytics.sendToolStarted(Analytics.java:6)
+	at com.infineon.aurix.buildsystem.AurixIDEStartup.earlyStartup(AurixIDEStartup.java:23)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2656)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 13 more
+
+!ENTRY org.eclipse.ui 4 0 2024-02-16 09:34:01.392
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'com.infineon.aurix.buildsystem' plug-in.
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.notification.NotificationService.<init>(NotificationService.java:62)
+	at com.infineon.aurix.buildsystem.notification.NotificationService.getInstance(NotificationService.java:82)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.send(AnalyticsService.java:159)
+	at com.infineon.aurix.buildsystem.AnalyticsUtils.send(AnalyticsUtils.java:24)
+	at com.infineon.aurix.buildsystem.Analytics.sendToolStarted(Analytics.java:6)
+	at com.infineon.aurix.buildsystem.AurixIDEStartup.earlyStartup(AurixIDEStartup.java:23)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2656)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 13 more
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 2 0 2024-02-16 09:34:11.077
+!MESSAGE Analytics Service can't be started because No analytics endpoint is configured
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 1 0 2024-02-16 09:34:11.078
+!MESSAGE Analytics service enabled
+
+!ENTRY com.infineon.aurix.buildsystem.remote-repo 1 0 2024-02-16 10:45:15.268
+!MESSAGE Using bundled version for artifact: project-initializer:tricore-tc2xx
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 10:45:17.280
+!MESSAGE Processing template: C:\workspace\AURIX_Project\2024_02_16\Start_Project\Cpu0_Main.ftlc
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-16 10:45:46.155
+!MESSAGE Indexed 'Start_Project' (165 sources, 638 headers) in 23.2 sec: 147,675 declarations; 196,219 references; 10 unresolved inclusions; 4,982 syntax errors; 5,551 unresolved names (1.6%)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 10:46:07.823
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1386 milliseconds. (full boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 10:46:07.888
+!MESSAGE Include paths were discovered in 63 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 10:46:38.744
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 242 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 10:46:38.803
+!MESSAGE Include paths were discovered in 57 milliseconds.
+!SESSION 2024-02-16 10:53:12.342 -----------------------------------------------
+eclipse.buildId=1.9.20
+java.version=17.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -perspective com.infineon.aurix.buildmanager.perspective.c
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -perspective com.infineon.aurix.buildmanager.perspective.c
+
+!ENTRY com.infineon.aurix.buildsystem 4 0 2024-02-16 10:53:25.668
+!MESSAGE ConnectException
+!STACK 0
+java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:573)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:123)
+	at com.infineon.aurix.buildsystem.IFXNetworkUtils$1.run(IFXNetworkUtils.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1047)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:472)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:404)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:476)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:476)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:157)
+	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2673)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:294)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:654)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:552)
+	... 3 more
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 29 more
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 2 0 2024-02-16 10:53:25.749
+!MESSAGE Unable to initialize Analytics Service.
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 4 0 2024-02-16 10:53:25.751
+!MESSAGE java.net.MalformedURLException: no protocol: 
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.<init>(AnalyticsService.java:66)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.getInstance(AnalyticsService.java:95)
+	at com.infineon.aurix.buildsystem.Logger.logError(Logger.java:34)
+	at com.infineon.aurix.buildsystem.IFXNetworkUtils$1.run(IFXNetworkUtils.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 7 more
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:28:04.516
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1933 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:28:04.595
+!MESSAGE Include paths were discovered in 69 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:28:14.627
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 179 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:28:14.691
+!MESSAGE Include paths were discovered in 62 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:30:44.981
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:30:44.983
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:30:45.029
+!MESSAGE Include paths were discovered in 45 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:30:50.631
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 216 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:30:50.696
+!MESSAGE Include paths were discovered in 63 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:31:36.828
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 170 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:31:36.874
+!MESSAGE Include paths were discovered in 44 milliseconds.
+!SESSION 2024-02-16 11:34:16.636 -----------------------------------------------
+eclipse.buildId=1.9.20
+java.version=17.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -perspective com.infineon.aurix.buildmanager.perspective.c
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -perspective com.infineon.aurix.buildmanager.perspective.c
+
+!ENTRY com.infineon.aurix.buildsystem 4 0 2024-02-16 11:34:28.354
+!MESSAGE ConnectException
+!STACK 0
+java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:573)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:123)
+	at com.infineon.aurix.buildsystem.IFXNetworkUtils$1.run(IFXNetworkUtils.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1047)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:472)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:404)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:476)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:476)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:157)
+	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2673)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:294)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:654)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:552)
+	... 3 more
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 29 more
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 2 0 2024-02-16 11:34:28.386
+!MESSAGE Unable to initialize Analytics Service.
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 4 0 2024-02-16 11:34:28.387
+!MESSAGE java.net.MalformedURLException: no protocol: 
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.<init>(AnalyticsService.java:66)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.getInstance(AnalyticsService.java:95)
+	at com.infineon.aurix.buildsystem.Logger.logError(Logger.java:34)
+	at com.infineon.aurix.buildsystem.IFXNetworkUtils$1.run(IFXNetworkUtils.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 7 more
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:35:29.730
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1631 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:35:29.820
+!MESSAGE Include paths were discovered in 82 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:35:37.196
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 178 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:35:37.261
+!MESSAGE Include paths were discovered in 62 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:39:19.181
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 231 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 11:39:19.255
+!MESSAGE Include paths were discovered in 72 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 14:53:07.853
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 2196 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 14:53:07.904
+!MESSAGE Include paths were discovered in 48 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 14:53:28.250
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 158 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 14:53:28.309
+!MESSAGE Include paths were discovered in 55 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 15:38:38.106
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1016 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 15:38:38.153
+!MESSAGE Include paths were discovered in 43 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 15:38:48.018
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 140 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 15:38:48.057
+!MESSAGE Include paths were discovered in 39 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:03:26.175
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1281 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:03:26.233
+!MESSAGE Include paths were discovered in 56 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:03:33.511
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 194 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:03:33.558
+!MESSAGE Include paths were discovered in 45 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:05:04.122
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 823 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:05:04.161
+!MESSAGE Include paths were discovered in 37 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:10:30.178
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:10:30.178
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:10:30.229
+!MESSAGE Include paths were discovered in 49 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:13:34.799
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:13:34.799
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:13:34.854
+!MESSAGE Include paths were discovered in 53 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:16:26.361
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:16:26.362
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:16:26.403
+!MESSAGE Include paths were discovered in 40 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:18:59.038
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:18:59.038
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:18:59.080
+!MESSAGE Include paths were discovered in 39 milliseconds.
+!SESSION 2024-02-16 16:19:28.400 -----------------------------------------------
+eclipse.buildId=1.9.20
+java.version=17.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -perspective com.infineon.aurix.buildmanager.perspective.c
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -perspective com.infineon.aurix.buildmanager.perspective.c
+
+!ENTRY com.infineon.aurix.buildsystem 4 0 2024-02-16 16:19:55.801
+!MESSAGE ConnectException
+!STACK 0
+java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:573)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:123)
+	at com.infineon.aurix.buildsystem.IFXNetworkUtils$1.run(IFXNetworkUtils.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1047)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:472)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:404)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:476)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:476)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:157)
+	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2673)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:294)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:654)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:552)
+	... 3 more
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 29 more
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 2 0 2024-02-16 16:19:56.138
+!MESSAGE Unable to initialize Analytics Service.
+
+!ENTRY com.infineon.aurix.buildsystem.analytics 4 0 2024-02-16 16:19:56.139
+!MESSAGE java.net.MalformedURLException: no protocol: 
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.<init>(AnalyticsService.java:66)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.getInstance(AnalyticsService.java:95)
+	at com.infineon.aurix.buildsystem.AnalyticsUtils.send(AnalyticsUtils.java:24)
+	at com.infineon.aurix.buildsystem.Analytics.sendToolStarted(Analytics.java:6)
+	at com.infineon.aurix.buildsystem.AurixIDEStartup.earlyStartup(AurixIDEStartup.java:23)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2656)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 12 more
+
+!ENTRY org.eclipse.ui.workbench 4 2 2024-02-16 16:19:56.166
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.notification.NotificationService.<init>(NotificationService.java:62)
+	at com.infineon.aurix.buildsystem.notification.NotificationService.getInstance(NotificationService.java:82)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.send(AnalyticsService.java:159)
+	at com.infineon.aurix.buildsystem.AnalyticsUtils.send(AnalyticsUtils.java:24)
+	at com.infineon.aurix.buildsystem.Analytics.sendToolStarted(Analytics.java:6)
+	at com.infineon.aurix.buildsystem.AurixIDEStartup.earlyStartup(AurixIDEStartup.java:23)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2656)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 13 more
+
+!ENTRY org.eclipse.ui 4 0 2024-02-16 16:19:56.167
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'com.infineon.aurix.buildsystem' plug-in.
+!STACK 0
+java.lang.IllegalArgumentException: java.net.MalformedURLException: no protocol: 
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:679)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:125)
+	at com.google.api.client.http.GenericUrl.<init>(GenericUrl.java:108)
+	at com.infineon.aurix.buildsystem.notification.NotificationService.<init>(NotificationService.java:62)
+	at com.infineon.aurix.buildsystem.notification.NotificationService.getInstance(NotificationService.java:82)
+	at com.infineon.aurix.buildsystem.analytics.AnalyticsService.send(AnalyticsService.java:159)
+	at com.infineon.aurix.buildsystem.AnalyticsUtils.send(AnalyticsUtils.java:24)
+	at com.infineon.aurix.buildsystem.Analytics.sendToolStarted(Analytics.java:6)
+	at com.infineon.aurix.buildsystem.AurixIDEStartup.earlyStartup(AurixIDEStartup.java:23)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2656)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.MalformedURLException: no protocol: 
+	at java.base/java.net.URL.<init>(URL.java:674)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.google.api.client.http.GenericUrl.parseURL(GenericUrl.java:677)
+	... 13 more
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:22:15.500
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 2028 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:22:15.583
+!MESSAGE Include paths were discovered in 76 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:23:40.181
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:23:40.182
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:23:40.261
+!MESSAGE Include paths were discovered in 77 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:23:47.423
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 231 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:23:47.478
+!MESSAGE Include paths were discovered in 52 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:45:38.289
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1511 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:45:38.372
+!MESSAGE Include paths were discovered in 77 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:45:44.468
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 254 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:45:44.535
+!MESSAGE Include paths were discovered in 65 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:46:57.874
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:46:57.876
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:46:57.963
+!MESSAGE Include paths were discovered in 86 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:47:03.868
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 203 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:47:03.935
+!MESSAGE Include paths were discovered in 65 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:48:14.677
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:48:14.679
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:48:14.771
+!MESSAGE Include paths were discovered in 89 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:48:28.535
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:48:28.535
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:48:28.608
+!MESSAGE Include paths were discovered in 70 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:48:42.224
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 365 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:48:42.300
+!MESSAGE Include paths were discovered in 74 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:51:44.585
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 420 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:51:44.669
+!MESSAGE Include paths were discovered in 82 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:56:47.180
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1491 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:56:47.242
+!MESSAGE Include paths were discovered in 60 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:56:55.684
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 205 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:56:55.734
+!MESSAGE Include paths were discovered in 48 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:58:51.411
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1489 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:58:51.482
+!MESSAGE Include paths were discovered in 61 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:58:58.981
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:58:58.982
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 0 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:58:59.028
+!MESSAGE Include paths were discovered in 45 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:59:04.352
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 264 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:59:04.424
+!MESSAGE Include paths were discovered in 70 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:59:30.846
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 249 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:59:30.940
+!MESSAGE Include paths were discovered in 92 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:59:39.020
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 171 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:59:39.073
+!MESSAGE Include paths were discovered in 51 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:59:48.601
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 423 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 16:59:48.671
+!MESSAGE Include paths were discovered in 67 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:02:40.132
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:02:40.133
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:02:40.199
+!MESSAGE Include paths were discovered in 64 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:02:46.488
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 206 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:02:46.543
+!MESSAGE Include paths were discovered in 54 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:06:08.343
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1773 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:06:08.410
+!MESSAGE Include paths were discovered in 64 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:06:17.717
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 310 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:06:17.767
+!MESSAGE Include paths were discovered in 48 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:06:27.455
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 253 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:06:27.496
+!MESSAGE Include paths were discovered in 39 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:06:30.969
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 216 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:06:31.016
+!MESSAGE Include paths were discovered in 46 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:08:04.030
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:08:04.032
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 2 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:08:04.118
+!MESSAGE Include paths were discovered in 83 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:08:10.965
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 171 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:08:11.010
+!MESSAGE Include paths were discovered in 43 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:16:50.291
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1100 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:16:50.355
+!MESSAGE Include paths were discovered in 63 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:16:59.894
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 319 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:16:59.971
+!MESSAGE Include paths were discovered in 74 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:17:57.673
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1769 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:17:57.771
+!MESSAGE Include paths were discovered in 98 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:18:04.344
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 200 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:18:04.413
+!MESSAGE Include paths were discovered in 68 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:19:26.749
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:19:26.750
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:19:26.808
+!MESSAGE Include paths were discovered in 56 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:19:35.212
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 167 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:19:35.260
+!MESSAGE Include paths were discovered in 45 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:21:46.537
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1421 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:21:46.619
+!MESSAGE Include paths were discovered in 61 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:22:00.317
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 388 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:22:00.409
+!MESSAGE Include paths were discovered in 90 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:23:14.664
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:23:14.665
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 2 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:23:14.740
+!MESSAGE Include paths were discovered in 71 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:24:02.588
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:24:02.589
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:24:02.653
+!MESSAGE Include paths were discovered in 62 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:24:07.813
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 192 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:24:07.858
+!MESSAGE Include paths were discovered in 44 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:25:26.307
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 341 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:25:26.362
+!MESSAGE Include paths were discovered in 53 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:25:32.633
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 166 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:25:32.676
+!MESSAGE Include paths were discovered in 41 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:26:47.562
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:26:47.563
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:26:47.624
+!MESSAGE Include paths were discovered in 59 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:26:56.647
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 411 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:26:56.771
+!MESSAGE Include paths were discovered in 120 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:32:09.339
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:32:09.340
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:32:09.411
+!MESSAGE Include paths were discovered in 69 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:32:14.807
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 260 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:32:14.843
+!MESSAGE Include paths were discovered in 34 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:35:57.278
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1373 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:35:57.377
+!MESSAGE Include paths were discovered in 98 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:36:06.185
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 390 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:36:06.241
+!MESSAGE Include paths were discovered in 54 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:51:32.342
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1396 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:51:32.389
+!MESSAGE Include paths were discovered in 40 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:51:44.375
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 298 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:51:44.410
+!MESSAGE Include paths were discovered in 32 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:52:43.589
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1581 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:52:43.628
+!MESSAGE Include paths were discovered in 28 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:52:51.231
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 176 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:52:51.276
+!MESSAGE Include paths were discovered in 44 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:56:48.855
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:56:48.856
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:56:48.916
+!MESSAGE Include paths were discovered in 57 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:57:12.428
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 373 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:57:12.494
+!MESSAGE Include paths were discovered in 62 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:57:19.409
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 168 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:57:19.448
+!MESSAGE Include paths were discovered in 37 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:57:54.807
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 316 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:57:54.867
+!MESSAGE Include paths were discovered in 58 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:59:47.624
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1615 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 17:59:47.686
+!MESSAGE Include paths were discovered in 61 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:02:33.278
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1465 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:02:33.366
+!MESSAGE Include paths were discovered in 68 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:02:38.317
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 183 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:02:38.356
+!MESSAGE Include paths were discovered in 38 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:04:41.755
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1458 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:04:41.816
+!MESSAGE Include paths were discovered in 40 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:04:50.429
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 344 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:04:50.485
+!MESSAGE Include paths were discovered in 54 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:06:12.432
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 1430 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:06:12.499
+!MESSAGE Include paths were discovered in 66 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:06:22.592
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project Start_Project boosted in 402 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-02-16 18:06:22.698
+!MESSAGE Include paths were discovered in 103 milliseconds.

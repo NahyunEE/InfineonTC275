@@ -1,0 +1,13 @@
+17:10:52 **** Incremental Build of configuration Debug for project TC275_Project1 ****
+make --output-sync -j12 all 
+Invoking: Print Size
+TASKING VX-toolset for AURIX Development Studio (non-commercial): ELF size v1.1r8 Build 22011964
+elfsize  "TC275_Project1.elf"
+Total sizes:
+ROM: 0x2583 (9603) = code: 0x2396 (9110) + romdata: 0x1ed (493)
+RAM: 0x9541 (38209) = data + bss
+Finished building: TC275_Project1.siz
+ 
+
+17:10:53 Build Finished. 0 errors, 0 warnings. (took 628ms)
+
