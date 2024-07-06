@@ -1,1 +1,2 @@
-# Personal Embedded Repository for training Embedded SW with TC275
+# Summary
+Personal Embedded Repository for training Embedded SW with TC275
